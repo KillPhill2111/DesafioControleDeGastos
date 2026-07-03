@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\backend\\backend.csproj": {}
+    "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioControleDeGastos\\backend\\backend.csproj": {}
   },
   "projects": {
-    "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\backend\\backend.csproj": {
+    "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioControleDeGastos\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\backend\\backend.csproj",
+        "projectUniqueName": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioControleDeGastos\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\backend\\backend.csproj",
+        "projectPath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioControleDeGastos\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\backend\\obj\\",
+        "outputPath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioControleDeGastos\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
