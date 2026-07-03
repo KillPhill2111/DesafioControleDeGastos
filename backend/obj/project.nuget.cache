@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qMoAEFHhS9s=",
+  "dgSpecHash": "JLLpsb6CHBU=",
   "success": true,
-  "projectFilePath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\back-end\\backend\\backend.csproj",
+  "projectFilePath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.8\\microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
@@ -11,10 +11,10 @@
     {
       "code": "NU1903",
       "level": "Warning",
-      "message": "O pacote 'Microsoft.OpenApi' 2.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\back-end\\backend\\backend.csproj",
+      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\backend\\backend.csproj",
       "warningLevel": 1,
-      "filePath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\back-end\\backend\\backend.csproj",
+      "filePath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioT-cnico-MaxProd\\backend\\backend.csproj",
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"
