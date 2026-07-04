@@ -7,7 +7,7 @@ Implementar um sistema capaz de:
 - consultar os totais por pessoa;
 - calcular o saldo geral.
 
-O sistema foi desenvolvido seguindo as regras de negócio fornecidas no desafio técnico.
+O sistema foi desenvolvido seguindo as regras de negócio.
 
 
 # Funcionalidades:
