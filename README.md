@@ -1,102 +1,58 @@
-A fim de te conhecermos um pouco mais desenvolvemos um desafio prático. As instruções necessárias para o seu prosseguimento estarão descritas a seguir.
-Desejamos sucesso na realização do desafio!
-Objetivo:
+## Objetivo
 
-Implementar um sistema de controle de gastos residenciais com:
+Implementar um sistema capaz de:
 
-    Cadastros de transações;
-    Cadastro de pessoas;
-    Consulta de totais;
+- cadastrar pessoas;
+- cadastrar receitas e despesas;
+- consultar os totais por pessoa;
+- calcular o saldo geral.
 
-Deixar claro qual foi a lógica/função do que foi desenvolvido, através de comentários e documentação no próprio código. 
-Especificação:
-
-Em linhas gerais, basta que o sistema cumpra os requisitos apresentados.
-Tecnologias:
-
-.NET com C# para o back-end e React com Typescript para o front-end. Os dados devem persistir após fechar a aplicação.
-Funcionalidades:
-
-Cadastro de pessoas: 
-
-Deverá ser implementado um cadastro contendo as funcionalidades básicas de gerenciamento: criação, deleção e listagem.
-
-Em casos que se delete uma pessoa, todas a transações dessa pessoa deverão ser apagadas.
-
-O cadastro de pessoa deverá conter:
-
-    Identificador (deve ser único e gerado automaticamente);
-    Nome;
-    Idade;
+O sistema foi desenvolvido seguindo as regras de negócio fornecidas no desafio técnico.
 
 
-Cadastro de transações: 
+# Funcionalidades:
+- Cadastro de pessoas
+- Listagem de pessoas
+- Exclusão de pessoas
+- Cadastro de receitas
+- Cadastro de despesas
+- Consulta de saldo individual
+- Consulta do saldo geral
 
-Deverá ser implementado um cadastro contendo as funcionalidades básicas de gerenciamento: criação e listagem (não é necessário implementar edição/deleção).
+# Regras de negocio:
+### Pessoas
 
-    Caso a pessoa informada seja menor de idade (menor de 18 anos), apenas despesas poderão ser cadastradas.
+- Identificador gerado automaticamente.
+- Exclusão em cascata das transações.
 
-O cadastro de transação deverá conter:
+### Transações
 
-    Identificador (deve ser único e gerado automaticamente);
-    Descrição;
-    Valor;
-    Tipo (despesa/receita);
+- Apenas pessoas cadastradas podem receber transações.
+- Menores de idade só podem possuir despesas.
 
-    Pessoa (identificador da pessoa);
-        Esse valor precisa existir no cadastro de pessoa;
+### Consulta
 
-Consulta de totais:
+- Total de receitas
+- Total de despesas
+- Saldo por pessoa
+- Total geral
 
-Deverá listar todas as pessoas cadastradas, exibindo o total de receitas, despesas e o saldo (receita – despesa) de cada uma.
+# Arquitetura:
+Frontend
+React + TypeScript
 
-Ao final da listagem, deverá ser exibido o total geral de todas as pessoas, incluindo o total de receitas, o total de despesas e o saldo líquido.
+↓
 
+API REST
 
-Critérios de avaliação:
+↓
 
-A avaliação do teste técnico será baseada nos seguintes pontos:
+ASP.NET Core
 
-    Aderência às regras de negócio;
-    Atenção aos detalhes;
-    Qualidade e legibilidade do código;
-    Boas práticas.
+↓
 
-Formato:
+Entity Framework Core
 
-Você deve subir o código-fonte da sua solução para um repositório git e nos envie o link do repositório, seguindo as instruções fornecidas nesse desafio.
+↓
 
-    
-  
-
-IMPORTANTE:
-
-    Certifique-se de que teremos acesso ao seu repositório, sendo importante que ele esteja público.
-    Solicitamos gentilmente que qualquer referência à ******** seja removida de todos os arquivos antes da publicação.
-    Caso se sinta à vontade, você pode implementar recursos adicionais desde que os mesmos não afetem o funcionamento dos já especificados nesse documento.
-
-
-Dúvidas: Caso tenha alguma dúvida, envie um e-mail para ************** com o título "Dúvida teste técnico Desenvolvimento".
-
-
-Organização da entrega
-
-Para facilitar a entrega do desafio: 
-
-1. Certifique-se que resolveu todo o desafio técnico;
-
-2. Verifique se seguiu as instruções para envio do Teste técnico;
-
-3. Suba o código-fonte final da sua solução para um repositório git.
-
-4. Envie o link do repositório, no campo abaixo, reforçamos que o repositório precisa estar público.
-
-Esta é a única forma de assegurar que iremos ter acesso ao seu teste técnico para análise.
-
- 
-
-Após finalizar a entrega, basta aguardar o contato da nossa equipe com um retorno sobre o processo seletivo.
-
-
-Boa sorte e até breve!1f340😉
-Insira o link do repositório da sua solução aqui
+SQLite
