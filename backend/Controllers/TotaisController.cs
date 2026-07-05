@@ -25,10 +25,10 @@ namespace backend.Controllers
                 //Aqui filtra e soma apenas as transações do tipo receita...
                 TotalReceitas = p.Transacoes.Where(t => t.Tipo == TipoTransacao.Receita).Sum(t => (decimal?)t.Valor) ?? 0,
                 //Filtra e soma transações do tipo despesas
-                TotalDespesas = p.Transacoes.Where(t => t.Tipo == TipoTransacao.Despesas).Sum(t => (decimal?)t.Valor) ?? 0,
+                TotalDespesas = p.Transacoes.Where(t => t.Tipo == TipoTransacao.Despesa).Sum(t => (decimal?)t.Valor) ?? 0,
                 //Calcula o saldo individual (Receita-despesas)
                 Saldo = (p.Transacoes.Where(t => t.Tipo == TipoTransacao.Receita).Sum(t => (decimal?)t.Valor) ?? 0) - 
-                            (p.Transacoes.Where(t => t.Tipo == TipoTransacao.Despesas).Sum(t => (decimal?)t.Valor) ?? 0)
+                            (p.Transacoes.Where(t => t.Tipo == TipoTransacao.Despesa).Sum(t => (decimal?)t.Valor) ?? 0)
                 }).ToListAsync();
 
                 var gerarReceitas=pessoasComTotais.Sum(p=>p.TotalReceitas);

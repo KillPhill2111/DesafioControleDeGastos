@@ -13,7 +13,7 @@ export default function CadastroTransacoes({onTransacaoCriada,pessoas}:CadastroT
     const [transacoes, setTransacoes]=useState<Transacao[]>([]);
     const [descricao, setDescricao]=useState('');
     const [valor, setValor]=useState('');
-    const [tipo, setTipo]=useState<'Receita'|'Despesa'>('Despesa');
+    const [tipo, setTipo]=useState<'Receita' | 'Despesa'>('Despesa');
     const [pessoaId,setPessoaId]=useState('');
     const [erro, setErro]=useState('');
     const [avisoMenorIdade, setAvisoMenorIdade]=useState(false);
@@ -62,8 +62,8 @@ export default function CadastroTransacoes({onTransacaoCriada,pessoas}:CadastroT
             await api.post('/transacoes',{
                 descricao,
                 valor:parseFloat(valor),
-                tipo,
-                pessoaId,
+                tipo:tipo,
+                pessoaId:pessoaId,
             })
 
             setDescricao('');
@@ -71,7 +71,19 @@ export default function CadastroTransacoes({onTransacaoCriada,pessoas}:CadastroT
             fetchTransacoes();
             onTransacaoCriada();
         }catch(er:any){
-            setErro(er.response?.data|| "Erro ao cadastrar a transção")
+            console.error("Erro completop retonado pela api",er.response?.data)
+          if (er.response?.data?.errors) {
+            const mensagensDeErro = Object.values(er.response.data.errors).flat().join(' ');
+          setErro(mensagensDeErro);
+          } 
+      
+          else if (typeof er.response?.data === 'string') {
+          setErro(er.response.data);
+          } 
+      
+          else {
+          setErro('Erro ao processar o lançamento no servidor.');
+      }
         }
     };
 
@@ -133,7 +145,7 @@ export default function CadastroTransacoes({onTransacaoCriada,pessoas}:CadastroT
           <label style={styles.label}>Tipo de Transação</label>
           <select
             value={tipo}
-            onChange={(e) => setTipo(e.target.value as 'Receita' | 'Despesa')}
+            onChange={(e) => setTipo(e.target.value as 'Receita'| 'Despesa')}
             style={styles.input}
             disabled={avisoMenorIdade} // Bloqueia a alteração se for menor de idade
           >
@@ -176,7 +188,7 @@ export default function CadastroTransacoes({onTransacaoCriada,pessoas}:CadastroT
                   <td style={styles.td}>{t.descricao}</td>
                   <td style={styles.td}>
                     <span style={t.tipo === 'Receita' ? styles.badgeReceita : styles.badgeDespesa}>
-                      {t.tipo}
+                      {t.tipo ==='Receita' ? "Receita" : "Despesa"}
                     </span>
                   </td>
                   <td style={{ ...styles.td, fontWeight: '500', color: t.tipo === 'Receita' ? '#38a169' : '#e53e3e' }}>

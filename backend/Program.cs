@@ -20,7 +20,15 @@ builder.Services.AddCors(options=>
     });
 });
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        var enumConverter = new System.Text.Json.Serialization.JsonStringEnumConverter(
+            namingPolicy: null,
+            allowIntegerValues: true
+        );
+        options.JsonSerializerOptions.Converters.Add(enumConverter);
+    });
 builder.Services.AddOpenApi();
 
 var app=builder.Build();

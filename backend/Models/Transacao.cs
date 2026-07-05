@@ -7,7 +7,21 @@ namespace backend.Models
     public enum TipoTransacao
     {
         Receita, //0
-        Despesas //1
+        Despesa //1
+    }
+    public class TransacaoDTO
+    {
+       [JsonPropertyName("descricao")]
+        public string Descricao { get; set; } = string.Empty;
+
+        [JsonPropertyName("valor")]
+        public decimal Valor { get; set; }
+
+        [JsonPropertyName("tipo")]
+        public string Tipo { get; set; } = string.Empty;
+
+        [JsonPropertyName("pessoaId")]
+        public Guid PessoaId { get; set; }
     }
     public class Transacao
     {
@@ -24,7 +38,6 @@ namespace backend.Models
         [Column(TypeName ="decimal(18,2)")]
         public decimal Valor{get;set;}
 
-        //Definições obrigatoria do tipo da transação
         [Required(ErrorMessage ="A transação precisa ser definida!")]
         [JsonConverter(typeof(JsonStringEnumConverter))]//("Receita"/"Despesa") ==>> 0/1
         public TipoTransacao Tipo{get;set;}
@@ -34,6 +47,12 @@ namespace backend.Models
 
         //relacionamento:--- Vincula a trasção a respectibva
         [JsonIgnore]
+        
+        [Required(ErrorMessage = "O identificador da pessoa é obrigatório.")]
+        public Guid PessoasId { get; set; }
+
+        // GARANTE QUE ESSAS DUAS LINHAS ESTEJAM EXATAMENTE ASSIM:
+        [System.Text.Json.Serialization.JsonIgnore]
         public Pessoa? Pessoa{get;set;}
 
 
