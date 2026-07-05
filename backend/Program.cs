@@ -32,7 +32,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("Desenvolvimento");
-app.UseAuthorization();
+// app.UseAuthorization();
 app.MapControllers();
 
 app.Run();

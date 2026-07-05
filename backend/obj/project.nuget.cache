@@ -43,7 +43,7 @@
     {
       "code": "NU1903",
       "level": "Warning",
-      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "message": "O pacote 'Microsoft.OpenApi' 2.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
       "projectPath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioControleDeGastos\\backend\\backend.csproj",
       "warningLevel": 1,
       "filePath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioControleDeGastos\\backend\\backend.csproj",
@@ -55,7 +55,7 @@
     {
       "code": "NU1903",
       "level": "Warning",
-      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "message": "O pacote 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
       "projectPath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioControleDeGastos\\backend\\backend.csproj",
       "warningLevel": 1,
       "filePath": "D:\\Dados\\Filipe\\Projetos de desenvolvimento e programação\\DesafioTécnico-MaxProd\\DesafioControleDeGastos\\backend\\backend.csproj",
