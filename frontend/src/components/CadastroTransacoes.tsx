@@ -145,7 +145,7 @@ export default function CadastroTransacoes({onTransacaoCriada,pessoas}:CadastroT
         <button type="submit" style={styles.button}>Lançar Transação</button>
       </form>
 
-      {/* REGRA DE NEGÓCIO VISUAL: Exibe o aviso caso a pessoa selecionada seja menor de 18 anos */}
+      {/* REGRA DE NEGOCIO VISUAL: Exibe o aviso caso a pessoa selecionada seja menor de 18 anos */}
       {avisoMenorIdade && (
         <div style={styles.warningContainer}>
           <AlertCircle size={18} style={{ marginRight: '8px', flexShrink: 0 }} />
@@ -191,7 +191,7 @@ export default function CadastroTransacoes({onTransacaoCriada,pessoas}:CadastroT
     </div>
   );
 }
-
+//Estilização do compoente
 const styles = {
   card: { background: '#fff', padding: '24px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', marginBottom: '24px' },
   title: { margin: '0 0 16px 0', fontSize: '18px', display: 'flex', alignItems: 'center', color: '#1a202c' },

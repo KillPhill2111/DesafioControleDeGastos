@@ -4,7 +4,7 @@ import type { Pessoa } from '../types';
 import { UserPlus, Trash2 } from 'lucide-react';
 
 interface CadastroPessoasProps {
-  onPessoasModificadas: () => void; // Avisa os outros componentes para se atualizarem
+  onPessoasModificadas: () => void; // avisa os outros componentes para se atualizarem
   pessoas: Pessoa[];
   fetchPessoas: () => void;
 }
@@ -14,7 +14,7 @@ export default function CadastroPessoas({ onPessoasModificadas, pessoas, fetchPe
   const [idade, setIdade] = useState('');
   const [erro, setErro] = useState('');
 
-  // Envia os dados para a API do .NET
+  // envia os dados para a API do .NET
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErro('');
@@ -30,17 +30,17 @@ export default function CadastroPessoas({ onPessoasModificadas, pessoas, fetchPe
         idade: parseInt(idade, 10),
       });
 
-      // Limpa os campos apos sucesso
+      // limpa os campos apos sucesso
       setNome('');
       setIdade('');
       fetchPessoas();
-      onPessoasModificadas(); // Atualiza a aba de totais e transações
+      onPessoasModificadas(); // atualiza a aba de totais e transações
     } catch (err: any) {
       setErro(err.response?.data || 'Erro ao cadastrar pessoa.');
     }
   };
 
-  // Exclui a pessoa e consequentemente suas transações (Regra de Negócio)
+  // Exclui a pessoa e suas transações (Regra de negocio)
   const handleDelete = async (id: string) => {
     if (window.confirm('Tem certeza que deseja excluir esta pessoa? Todas as transações vinculadas a ela serão apagadas.')) {
       try {
