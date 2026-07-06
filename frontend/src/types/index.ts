@@ -9,7 +9,7 @@ export interface Transacao{
     descricao:string;
     valor:number;
     tipo:'Receita'| 'Despesa';
-    pessoId:string;
+    pessoaId:string;
 }
 
 export interface TotalPessoa{

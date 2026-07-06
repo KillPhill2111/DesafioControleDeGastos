@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.IO.Pipes;
+using System.Text.Json.Serialization;
 
 namespace backend.Models
 {
@@ -16,6 +18,8 @@ namespace backend.Models
         [Range(0,150, ErrorMessage ="Insiria uma idade válida!!!")]
         public int Idade{get;set;}
 
+        [JsonIgnore]
+        [InverseProperty("Pessoa")]
         public List<Transacao> Transacoes{get;set;}=new ();
 
     }

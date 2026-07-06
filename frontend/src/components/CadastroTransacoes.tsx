@@ -184,7 +184,7 @@ export default function CadastroTransacoes({onTransacaoCriada,pessoas}:CadastroT
             ) : (
               transacoes.map((t) => (
                 <tr key={t.id} style={styles.tr}>
-                  <td style={styles.td}>{getNomePessoa(t.pessoId)}</td>
+                  <td style={styles.td}>{getNomePessoa(t.pessoaId)}</td>
                   <td style={styles.td}>{t.descricao}</td>
                   <td style={styles.td}>
                     <span style={t.tipo === 'Receita' ? styles.badgeReceita : styles.badgeDespesa}>

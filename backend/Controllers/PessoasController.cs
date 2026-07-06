@@ -41,6 +41,10 @@ namespace backend.Controllers
             {
                 return NotFound("A pessoa não foi encontrada no sistema");
             }
+
+            var transacoesDaPessoa=_context.Transacaos.Where(t=>t.PessoaId==id);
+
+            _context.Transacaos.RemoveRange(transacoesDaPessoa);           
             //Regra de negocio, deletar a pessoa e todas as transações dela
             _context.Pessoas.Remove(p);
             await _context.SaveChangesAsync();

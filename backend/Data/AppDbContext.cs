@@ -17,15 +17,16 @@ namespace backend.Data
 
             /*
             Regra de negocio:::
-                Aqui iremos dizewr ao banco de dados: "Uma pessoa tem muitas transações (HasMany),
-                mas uma transação pertence apena a uma unica pessoa (WhitOne);
-                Além disso, se uma pessoa for deletada, todo o historico de transações dela vai junto, 
-                subtraido do total da familia (DeletedBehavior.Cascade)
+                Aqui iremos dizer ao banco de dados: "Uma pessoa tem muitas transações (HasMany),
+                mas uma transação pertence apenas a uma única pessoa (WithOne);
+                Além disso, se uma pessoa for deletada, todo o histórico de transações dela vai junto, 
+                subtraído do total da família (DeleteBehavior.Cascade)
             */
-            modelBuilder.Entity<Pessoa>()
-                .HasMany(p=>p.Transacoes)
-                .WithOne(t=>t.Pessoa)
-                .HasForeignKey(T=>T.PessoaId)
+            
+            modelBuilder.Entity<Transacao>()
+                .HasOne(t => t.Pessoa)
+                .WithMany(p => p.Transacoes)
+                .HasForeignKey(t => t.PessoaId) // Usando o 't' minúsculo combinado com o DTO
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }
