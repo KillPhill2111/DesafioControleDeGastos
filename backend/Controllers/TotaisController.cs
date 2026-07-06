@@ -6,14 +6,14 @@ using backend.Models;
 namespace backend.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
-    public class TotaisController : ControllerBase
+    [Route("api/totais")]
+    public class TotaisController(AppDbContext context) : ControllerBase
     {
-        private readonly AppDbContext _context;
-        public TotaisController(AppDbContext context)
-        {
-            _context=context;
-        }
+        private readonly AppDbContext _context= context;
+        // public TotaisController(AppDbContext context)
+        // {
+        //     _context=context;
+        // }
         [HttpGet]
         public async Task<IActionResult> GetTotais()
         {
@@ -30,15 +30,15 @@ namespace backend.Controllers
                 Saldo = (p.Transacoes.Where(t => t.Tipo == TipoTransacao.Receita).Sum(t => (decimal?)t.Valor) ?? 0) - 
                             (p.Transacoes.Where(t => t.Tipo == TipoTransacao.Despesa).Sum(t => (decimal?)t.Valor) ?? 0)
                 }).ToListAsync();
-
-                var gerarReceitas=pessoasComTotais.Sum(p=>p.TotalReceitas);
-                var gerarDespesas=pessoasComTotais.Sum(p=>p.TotalDespesas);
-                var saldoLiquido=gerarReceitas-gerarDespesas;
+                // Caclula os totais do cabeçalho somando os resultados
+                var gerarReceitas = pessoasComTotais.Sum(p => p.TotalReceitas);
+                var gerarDespesas = pessoasComTotais.Sum(p => p.TotalDespesas);
+                var saldoLiquido = gerarReceitas - gerarDespesas;
 
                 return Ok(new
                     {
-                        Pessoa=pessoasComTotais,
-                        Gerla=new
+                        Pessoas=pessoasComTotais,
+                        Geral=new
                         {
                             TotalReceitas=gerarReceitas,
                             TotalDespesas=gerarDespesas,

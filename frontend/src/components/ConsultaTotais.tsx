@@ -34,10 +34,10 @@ export default function ConsultaTotais({ atualizarSinal }: ConsultaTotaisProps) 
     return <div style={{ padding: '20px', textAlign: 'center', color: '#718096' }}>Carregando dados financeiros...</div>;
   }
 
-  if (carregando|| !dados ||!dados.geral) {
+  if (!dados ||!dados.geral) {
     return (
       <div style={{ background: '#fff', padding: '24px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', textAlign: 'center', color: '#718096' }}>
-        Carregando balanço financeiro...
+        Nenhum dado financeiro a ser apresentado no momento...
       </div>
     )
   }
@@ -97,7 +97,7 @@ export default function ConsultaTotais({ atualizarSinal }: ConsultaTotaisProps) 
               dados.pessoas.map((p) => (
                 <tr key={p.id} style={styles.tr}>
                   <td style={{ ...styles.td, fontWeight: '500' }}>{p.nome}</td>
-                  <td style={{ ...styles.td, color: '#38a169' }}>R$ {p.totalReceita.toFixed(2)}</td>
+                  <td style={{ ...styles.td, color: '#38a169' }}>R$ {p.totalReceitas.toFixed(2)}</td>
                   <td style={{ ...styles.td, color: '#e53e3e' }}>R$ {p.totalDespesas.toFixed(2)}</td>
                   <td style={{ ...styles.td, fontWeight: '600', color: p.saldo >= 0 ? '#2f855a' : '#9b2c2c' }}>
                     R$ {p.saldo.toFixed(2)}

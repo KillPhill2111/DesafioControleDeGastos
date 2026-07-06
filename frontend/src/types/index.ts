@@ -15,7 +15,7 @@ export interface Transacao{
 export interface TotalPessoa{
     id:string;
     nome:string;
-    totalReceita:number;
+    totalReceitas:number;
     totalDespesas:number;
     saldo:number;
 }
