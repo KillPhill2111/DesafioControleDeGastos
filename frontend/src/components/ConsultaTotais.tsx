@@ -126,20 +126,20 @@ export default function ConsultaTotais({ atualizarSinal }: ConsultaTotaisProps) 
 }
 
 const styles = {
-  card: { background: '#fff', padding: '24px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', marginBottom: '24px' },
-  title: { margin: '0 0 20px 0', fontSize: '18px', display: 'flex', alignItems: 'center', color: '#1a202c' },
+  card: { background: '#1e293b', padding: '24px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.2)', marginBottom: '24px' },
+  title: { margin: '0 0 20px 0', fontSize: '18px', display: 'flex', alignItems: 'center', color: '#f8fafc' },
   gridCards: { display: 'flex', gap: '16px', marginBottom: '28px', flexWrap: 'wrap' as const },
-  miniCard: { flex: 1, minWidth: '200px', background: '#f7fafc', padding: '16px', borderRadius: '6px', boxShadow: '0 1px 3px rgba(0,0,0,0.02)' },
+  miniCard: { flex: 1, minWidth: '200px', background: '#0f172a', padding: '16px', borderRadius: '6px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' },
   miniCardHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' },
-  miniCardTitle: { fontSize: '13px', color: '#718096', fontWeight: '500' },
+  miniCardTitle: { fontSize: '13px', color: '#94a3b8', fontWeight: '500' },
   miniCardValue: { fontSize: '20px', fontWeight: '700' },
   tableContainer: { overflowX: 'auto' as const },
   table: { width: '100%', borderCollapse: 'collapse' as const, marginTop: '8px' },
-  thRow: { background: '#f7fafc', borderBottom: '2px solid #e2e8f0' },
-  th: { textAlign: 'left' as const, padding: '12px', fontSize: '14px', fontWeight: '600', color: '#4a5568' },
-  tr: { borderBottom: '1px solid #e2e8f0' },
-  td: { padding: '12px', fontSize: '14px', color: '#2d3748' },
-  tdEmpty: { padding: '20px', textAlign: 'center' as const, color: '#718096', fontSize: '14px' },
-  tfootRow: { background: '#edf2f7', borderTop: '3px solid #cbd5e0', fontWeight: '700' as const },
-  tdFoot: { padding: '14px 12px', fontSize: '14px', color: '#1a202c' }
+  thRow: { background: '#0f172a', borderBottom: '2px solid #334155' },
+  th: { textAlign: 'left' as const, padding: '12px', fontSize: '14px', fontWeight: '600', color: '#94a3b8' },
+  tr: { borderBottom: '1px solid #334155' },
+  td: { padding: '12px', fontSize: '14px', color: '#e2e8f0' },
+  tdEmpty: { padding: '20px', textAlign: 'center' as const, color: '#64748b', fontSize: '14px' },
+  tfootRow: { background: '#0f172a', borderTop: '3px solid #475569', fontWeight: '700' as const },
+  tdFoot: { padding: '14px 12px', fontSize: '14px', color: '#f8fafc' }
 };

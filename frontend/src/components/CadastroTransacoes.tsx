@@ -205,23 +205,23 @@ export default function CadastroTransacoes({onTransacaoCriada,pessoas}:CadastroT
 }
 //Estilização do compoente
 const styles = {
-  card: { background: '#fff', padding: '24px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', marginBottom: '24px' },
-  title: { margin: '0 0 16px 0', fontSize: '18px', display: 'flex', alignItems: 'center', color: '#1a202c' },
-  subtitle: { fontSize: '16px', color: '#4a5568', margin: '24px 0 12px 0' },
+  card: { background: '#1e293b', padding: '24px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.2)', marginBottom: '24px' },
+  title: { margin: '0 0 16px 0', fontSize: '18px', display: 'flex', alignItems: 'center', color: '#f8fafc' },
+  subtitle: { fontSize: '16px', color: '#cbd5e1', margin: '24px 0 12px 0' },
   form: { display: 'flex', gap: '16px', alignItems: 'flex-end', flexWrap: 'wrap' as const },
   inputGroup: { display: 'flex', flexDirection: 'column' as const, flex: 1, minWidth: '180px' },
-  label: { fontSize: '14px', fontWeight: '500', color: '#4a5568', marginBottom: '6px' },
-  input: { padding: '10px', borderRadius: '6px', border: '1px solid #cbd5e0', fontSize: '14px', outline: 'none', background: '#fff' },
-  button: { background: '#3182ce', color: '#fff', border: 'none', padding: '11px 20px', borderRadius: '6px', fontWeight: '500', cursor: 'pointer', height: '40px' },
-  error: { background: '#fed7d7', color: '#c53030', padding: '10px', borderRadius: '6px', fontSize: '14px', marginBottom: '16px' },
-  warningContainer: { display: 'flex', alignItems: 'center', background: '#fffaf0', border: '1px solid #feebc8', color: '#dd6b20', padding: '12px', borderRadius: '6px', marginTop: '16px', fontSize: '13px', lineHeight: '1.4' },
+  label: { fontSize: '14px', fontWeight: '500', color: '#94a3b8', marginBottom: '6px' },
+  input: { padding: '10px', borderRadius: '6px', border: '1px solid #334155', background: '#0f172a', color: '#f8fafc', fontSize: '14px', outline: 'none' },
+  button: { background: '#3b82f6', color: '#fff', border: 'none', padding: '11px 20px', borderRadius: '6px', fontWeight: '500', cursor: 'pointer', height: '40px' },
+  error: { background: '#7f1d1d', color: '#fca5a5', padding: '10px', borderRadius: '6px', fontSize: '14px', marginBottom: '16px', border: '1px solid #b91c1c' },
+  warningContainer: { display: 'flex', alignItems: 'center', background: '#78350f', border: '1px solid #b45309', color: '#fef3c7', padding: '12px', borderRadius: '6px', marginTop: '16px', fontSize: '13px', lineHeight: '1.4' },
   tableContainer: { overflowX: 'auto' as const },
   table: { width: '100%', borderCollapse: 'collapse' as const, marginTop: '8px' },
-  thRow: { background: '#f7fafc', borderBottom: '2px solid #e2e8f0' },
-  th: { textAlign: 'left' as const, padding: '12px', fontSize: '14px', fontWeight: '600', color: '#4a5568' },
-  tr: { borderBottom: '1px solid #e2e8f0' },
-  td: { padding: '12px', fontSize: '14px', color: '#2d3748' },
-  tdEmpty: { padding: '20px', textAlign: 'center' as const, color: '#718096', fontSize: '14px' },
-  badgeReceita: { background: '#c6f6d5', color: '#22543d', padding: '4px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: '500' },
-  badgeDespesa: { background: '#fed7d7', color: '#742a2a', padding: '4px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: '500' }
+  thRow: { background: '#0f172a', borderBottom: '2px solid #334155' },
+  th: { textAlign: 'left' as const, padding: '12px', fontSize: '14px', fontWeight: '600', color: '#94a3b8' },
+  tr: { borderBottom: '1px solid #334155' },
+  td: { padding: '12px', fontSize: '14px', color: '#e2e8f0' },
+  tdEmpty: { padding: '20px', textAlign: 'center' as const, color: '#64748b', fontSize: '14px' },
+  badgeReceita: { background: '#064e3b', color: '#a7f3d0', padding: '4px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: '500' },
+  badgeDespesa: { background: '#7f1d1d', color: '#fca5a5', padding: '4px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: '500' }
 };

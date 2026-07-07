@@ -35,7 +35,7 @@ function App() {
       <div style={styles.container}>
       <header style={styles.header}>
         <h1 style={styles.mainTitle}>💰💰 Sistema de Controle de Gastos Residenciais 💰💰</h1>
-        <p style={styles.subtitle}>Gerencie despesas, receitas e balanço familiar de forma transparente</p>
+        <p style={styles.subtitle}>Gerencie despesas, receitas e balanço familiar de forma simples.</p>
       </header>
 
       <main style={styles.mainLayout}>
@@ -63,10 +63,10 @@ function App() {
 }
 //estilização da pagina principal
 const styles = {
-  container: { background: '#f0f4f8', minHeight: '100vh', padding: '32px 24px', fontFamily: '"Segoe UI", Roboto, sans-serif' },
+  container: { background: '#121824', minHeight: '100vh', padding: '32px 24px', fontFamily: '"Segoe UI", Roboto, sans-serif' },
   header: { marginBottom: '32px', textAlign: 'center' as const },
-  mainTitle: { margin: '0 0 8px 0', fontSize: '26px', color: '#1a202c', fontWeight: '700' },
-  subtitle: { margin: 0, fontSize: '15px', color: '#4a5568' },
+  mainTitle: { margin: '0 0 8px 0', fontSize: '26px', color: '#f8fafc', fontWeight: '700' }, // Título em branco/gelo
+  subtitle: { margin: 0, fontSize: '15px', color: '#94a3b8' }, // Subtítulo em cinza claro
   mainLayout: { display: 'flex', gap: '24px', maxWidth: '1400px', margin: '0 auto', flexWrap: 'wrap' as const },
   coluna: { flex: 1, minWidth: '450px', display: 'flex', flexDirection: 'column' as const }
 };
