@@ -113,7 +113,7 @@ export default function ConsultaTotais({ atualizarSinal }: ConsultaTotaisProps) 
                 <td style={styles.tdFoot}>TOTAL GERAL</td>
                 <td style={{ ...styles.tdFoot, color: '#2f855a' }}>R$ {dados.geral.totalReceitas.toFixed(2)}</td>
                 <td style={{ ...styles.tdFoot, color: '#9b2c2c' }}>R$ {dados.geral.totalDespesas.toFixed(2)}</td>
-                <td style={{ ...styles.tdFoot, background: dados.geral.saldoLiquido >= 0 ? '#ebf8ff' : '#fff5f5', color: dados.geral.saldoLiquido >= 0 ? '#2b6cb0' : '#9b2c2c' }}>
+                <td style={{ ...styles.tdFoot,borderRadius:'10px' , background: dados.geral.saldoLiquido >= 0 ? '#002270' : '#2e0000', color: dados.geral.saldoLiquido >= 0 ? '#2b6cb0' : '#9b2c2c' }}>
                   R$ {dados.geral.saldoLiquido.toFixed(2)}
                 </td>
               </tr>
