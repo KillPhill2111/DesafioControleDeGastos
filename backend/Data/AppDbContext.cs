@@ -26,7 +26,7 @@ namespace backend.Data
             modelBuilder.Entity<Transacao>()
                 .HasOne(t => t.Pessoa)
                 .WithMany(p => p.Transacoes)
-                .HasForeignKey(t => t.PessoaId) // Usando o 't' minúsculo combinado com o DTO
+                .HasForeignKey(t => t.PessoaId) 
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

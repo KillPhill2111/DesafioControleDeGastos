@@ -9,11 +9,11 @@ namespace backend.Models
     {
         [Key]
         public Guid Id {get;set;}= Guid.NewGuid(); 
-        //Definições obrigatorios do nome de usuario
+        //DefiniçOes obrigatorios do nome de usuario
         [Required(ErrorMessage ="O nome da péssoa é obrigatório!")]
         [StringLength(100, ErrorMessage ="O nome não pode ultrapassar 100 caracteres!")]
         public string Nome {get;set;}=String.Empty;
-        //Definições obrigatorios da idade de usuario
+        //DefiniçOes obrigatorios da idade de usuario
         [Required(ErrorMessage ="A idade da pessoa é obrigatória! ")]
         [Range(0,150, ErrorMessage ="Insiria uma idade válida!!!")]
         public int Idade{get;set;}

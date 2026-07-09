@@ -22,7 +22,7 @@ namespace backend.Controllers
         [HttpPost]
         public async Task<ActionResult<Transacao>> PostTransacao([FromBody]TransacaoDTO dto)
         {
-            // 1. REGRA DE NEGÓCIO: Verifica se a pessoa informada existe no cadastro
+            // 1. REGRA DE NEGOCIO: Verifica se a pessoa informada existe no cadastro
             var pessoa = await _context.Pessoas.FindAsync(dto.PessoaId);
             if (pessoa == null)
             {
@@ -35,7 +35,7 @@ namespace backend.Controllers
                 return BadRequest("O tipo de transação enviado é inválido. Use 'Receita' ou 'Despesa'.");
             }
 
-            // 3. REGRA DE NEGÓCIO: Menor de idade (menor de 18 anos) só pode cadastrar DESPESAS
+            // 3. REGRA DE NEGOCIO: Menor de idade (menor de 18 anos) só pode cadastrar DESPESAS
             if (pessoa.Idade < 18 && tipoEnum == TipoTransacao.Receita)
             {
                 return BadRequest("Menores de 18 anos só podem registrar despesas.");
@@ -46,7 +46,7 @@ namespace backend.Controllers
             {
                 Descricao = dto.Descricao,
                 Valor = dto.Valor,
-                Tipo = tipoEnum, // Injeta o Enum convertido com sucesso
+                Tipo = tipoEnum, 
                 PessoaId = dto.PessoaId
             };
 

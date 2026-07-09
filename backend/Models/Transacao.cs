@@ -45,8 +45,8 @@ namespace backend.Models
         [Required(ErrorMessage = "O identificador da pessoa é obrigatório...")]
         public Guid PessoaId { get; set; } // Mantemos APENAS este no singular!
 
-        // RELACIONAMENTO: Vincula a transação à sua respectiva pessoa
-        // Colocamos o ForeignKey aqui para amarrar o objeto Pessoa estritamente à coluna PessoaId do C#
+        // RELACIONAMENTO: Vincula a transaçao à sua respectiva pessoa
+        // Colocmos o ForeignKey aqui para amarrar o objeto Pessoa estritamente a coluna PessoaId do C#
         [JsonIgnore]
         [ForeignKey("PessoaId")]
         public Pessoa? Pessoa { get; set; }
